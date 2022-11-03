@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+=======
+import 'package:legacy_buttons/LegacyRaisedButton.dart';
+>>>>>>> e061a799b54ff22327ba81b98057d6d11b769a60
 import './question.dart';
 import './answer.dart';
 
