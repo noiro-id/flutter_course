@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:legacy_buttons/LegacyRaisedButton.dart';
 
 class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
@@ -10,11 +9,14 @@ class Answer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: LegacyRaisedButton(
-          onPressed: selectHandler,
-          color: Colors.blue,
-          textColor: Colors.white,
-          child: Text(answerText)),
+      child: ElevatedButton(
+        onPressed: selectHandler,
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.blue),
+          foregroundColor: MaterialStateProperty.all(Colors.white),
+        ),
+        child: Text(answerText),
+      ),
     );
   }
 }

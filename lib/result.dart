@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:legacy_buttons/LegacyFlatButton.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
@@ -31,14 +30,26 @@ class Result extends StatelessWidget {
             style: const TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-          LegacyFlatButton(
+          ElevatedButton(
             onPressed: () => resetHandler(),
-            textColor: Colors.white,
-            color: Colors.orange,
+            style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white, backgroundColor: Colors.orange),
             child: const Text(
               'Restart Quiz!',
             ),
           ),
+          // TextButton(
+          //   style: TextButton.styleFrom(disabledForegroundColor: Colors.grey),
+          //   onPressed: null,
+          //   child: const Text("test"),
+          // ),
+          // OutlinedButton(
+          //   onPressed: null,
+          //   style: OutlinedButton.styleFrom(
+          //       foregroundColor: Colors.orange,
+          //       side: const BorderSide(color: Colors.orange)),
+          //   child: const Text("test"),
+          // ),
         ],
       ),
     );

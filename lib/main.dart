@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wakelock/wakelock.dart';
 import './quiz.dart';
 import './result.dart';
 
@@ -72,6 +73,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    Wakelock.enable();
     // var dummy = const ['Hello'];
     // dummy.add('Max');
     // print(dummy);
