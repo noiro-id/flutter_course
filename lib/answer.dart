@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:legacy_buttons/LegacyRaisedButton.dart';
 
 class Answer extends StatelessWidget {
-  final Function selectHandler;
+  final VoidCallback selectHandler;
   final String answerText;
   const Answer(this.selectHandler, this.answerText, {super.key});
 
@@ -11,7 +11,7 @@ class Answer extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: LegacyRaisedButton(
-          onPressed: () => selectHandler(),
+          onPressed: selectHandler,
           color: Colors.blue,
           textColor: Colors.white,
           child: Text(answerText)),
