@@ -74,10 +74,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     Wakelock.enable();
-    // var dummy = const ['Hello'];
-    // dummy.add('Max');
-    // print(dummy);
-    //questions = const []; // this does not work if question is a const
 
     return MaterialApp(
       home: Scaffold(
@@ -90,7 +86,7 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               )
-            : Result(resultScore: _totalScore, resetHandler: _resetQuiz),
+            : Result(_totalScore, _resetQuiz),
       ),
     );
   }

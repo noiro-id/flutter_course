@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:legacy_buttons/LegacyRaisedButton.dart';
 
 class Question extends StatelessWidget {
   final String questionText;
